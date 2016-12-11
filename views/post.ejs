@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>single post</title>
+    <% include ./partials/header %>
+    <script type="text/javascript" src="/js/single_post.js"></script>
+</head>
+<body ng-app="singlePost" ng-controller="SinglePostController">
+    <div class="container">
+        <h1>{{title}}</h1>
+        <div class="spacer"></div>
+        <div ng-bind-html="postHtml"></div>
+        <div class="spacer "></div>
+        <button class="right padding font-size-3" ng-click="home()">Home</button>
+        <button class="right space-right padding font-size-3" ng-click="edit()">Edit</button>
+    </div>
+</body>
+</html>

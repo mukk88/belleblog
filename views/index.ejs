@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>blog</title>
+    <% include ./partials/header %>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body ng-app="index" ng-controller="IndexController">
+    <div class="container">
+        <button class="right padding font-size-3" ng-click="newPost()">New post</button>
+        <div ng-repeat="post in posts">
+            <a href="/post/{{post._id}}">{{post.title}}</a>
+        </div>
+    </div>
+</body>
+</html>

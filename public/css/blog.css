@@ -1,0 +1,40 @@
+.container {
+    margin:auto;
+    width:60%;
+    margin-top:2%;
+    min-width:500px;
+    max-width: 800px;
+}
+
+.spacer {
+    height:30px;
+}
+
+.bottom-space {
+    height:300px;
+}
+
+.right {
+    float:right;
+}
+
+.space-right {
+    margin-right:20px;
+}
+
+.submit {
+    padding: 10px;
+    font-size:1.5em;
+}
+
+#title_input {
+    font-size:3em;
+}
+
+.font-size-3 {
+    font-size:1.5em;   
+}
+
+.padding {
+    padding: 10px;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+<input id = "title_input" type="text" placeholder="post title" ng-model="title">
+    <div class="spacer"></div>
+    <form method="post" >
+        <textarea ui-tinymce="tinymceOptions" ng-model="postContent"></textarea>
+        <div class="spacer"></div>
+        <button class="right submit" ng-click="submitPost()">Submit Post</button>
+        <button class="right submit space-right" ng-click="cancelPost()">Cancel</button>
+    </form>
+    <div class="bottom-space"></div>
+</div>
