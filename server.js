@@ -4,6 +4,7 @@ const MongoClient = mongo.MongoClient
 const bodyParser= require('body-parser')
 var BSON = mongo.BSONPure;
 var app = express()
+var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use( bodyParser.json() ); 
@@ -82,7 +83,7 @@ app.get('/api/post/:id', function(req,res){
 MongoClient.connect('mongodb://admin:admin123@ds052819.mlab.com:52819/blog', (err, database) => {
   if (err) return console.log(err)
   db = database
-  app.listen(3000, () => {
+  app.listen(port, () => {
     console.log('listening on 3000')
   })
 })
