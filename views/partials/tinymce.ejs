@@ -1,10 +1,17 @@
 <div class="container">
-<input id = "title_input" type="text" placeholder="post title" ng-model="title">
+    <input id = "title_input" type="text" placeholder="post title" ng-model="title">
+    <div class="right">
+        <input type="checkbox" name="type" ng-model="private"> <span>Private</span>
+    </div>
+    <div>
+        <input id= "image_input" type="text" placeholder="post image" ng-model="postImage">
+    </div> 
     <div class="spacer"></div>
     <form method="post" >
         <textarea ui-tinymce="tinymceOptions" ng-model="postContent"></textarea>
         <div class="spacer"></div>
-        <button class="right submit" ng-click="submitPost()">Submit Post</button>
+        <button class="right submit" ng-click="submitPost()">Publish Post</button>
+        <button class="right submit space-right" ng-click="savePost()">Save</button>
         <button class="right submit space-right" ng-click="cancelPost()">Cancel</button>
     </form>
     <div class="bottom-space"></div>

@@ -58,7 +58,7 @@ app.post('/api/post/:id', function(req, res) {
 })
 
 app.get('/api/post', function(req,res){
-    db.collection('posts').find().toArray(function(err, results) {
+    db.collection('posts').find().sort({timestamp:-1}).toArray(function(err, results) {
         if (err) {
             res.send({status:"failed"})
         } else {

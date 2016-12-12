@@ -1,13 +1,22 @@
 .container {
     margin:auto;
-    width:60%;
     margin-top:2%;
-    min-width:500px;
-    max-width: 800px;
+    width: 780px;
+}
+
+.side-bar {
+    width:160px;
+    float:right;
+    /*border:1px solid;*/
+    margin-top: 60px;
 }
 
 .spacer {
     height:30px;
+}
+
+.spacer-small {
+    height: 15px
 }
 
 .bottom-space {
@@ -27,14 +36,82 @@
     font-size:1.5em;
 }
 
+.header {
+    font-family: 'Sacramento', bold;
+}
+
 #title_input {
     font-size:3em;
+}
+
+#image_input {
+    margin-top: 10px;
 }
 
 .font-size-3 {
     font-size:1.5em;   
 }
 
+.font-size-4 {
+    font-size:5em;
+}
+
 .padding {
     padding: 10px;
+}
+
+.tab {
+    width:33.3%;
+    float:left;
+    padding:5px 0px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    color:grey;
+}
+
+.outline {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.center {
+    text-align: center;
+}
+
+.post_summary {
+    border: 1px solid black;
+    margin: 60px 0;
+    width: 580px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.post_title {
+    text-decoration: none;
+    color: black;
+    font-size:2.5em;
+}
+
+.post_blurp {
+    text-decoration:none;
+}
+
+.post_image {
+    width:192px;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+#who-we-are-image {
+    width: 160px;
 }

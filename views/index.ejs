@@ -7,10 +7,32 @@
 </head>
 <body ng-app="index" ng-controller="IndexController">
     <div class="container">
-        <button class="right padding font-size-3" ng-click="newPost()">New post</button>
-        <div ng-repeat="post in posts">
-            <a href="/post/{{post._id}}">{{post.title}}</a>
+        <% include ./partials/layout %>
+        <div class="side-bar">
+            <div class="center">WHO WE ARE</div>
+            <div class="spacer-small"></div>
+            <img id="who-we-are-image" src="https://static.wixstatic.com/media/f930ab_f0c15128367f45c69dcafb18ae1b5cb8.jpg/v1/fill/w_344,h_344,al_c,lg_1,q_80/f930ab_f0c15128367f45c69dcafb18ae1b5cb8.jpg">
+            <div class="spacer-small"></div>
+            <div>We are Mark and Isabelle, newly weds who moved from sunny Singapore to the USA. It's hard to update our loved ones about all our adventures (and misadventures), so we hope that this blog will be able to help us share our lives with you.</div>
         </div>
+        <div ng-repeat="post in posts">
+            <div class="post_summary">
+                <a href="/post/{{post._id}}"><div class="post_title">{{post.title}}</div></a>
+                <div class="spacer-small"></div>
+                <div>
+                    <a href="/post/{{post._id}}">
+                        <span style="float:left;width:192px">
+                            <img class="post_image" src="{{post.image}}">
+                        </span>
+                    </a>
+                    <span class="post_blurp" style="width:300px;margin-left:20px;display: inline-block;">                    
+                        Relocating internationally is a pain. Relocating internationally with a dog (and a baby) is a (double) nightmare. (I was at the departure drop-off at the airport with all these plus a baby and a dog. I had to wait for about half an hour for Mark to return the car and get..
+                        <a href="/post/{{post._id}}"><button>Read More</button></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button class="right padding font-size-3" ng-click="newPost()" style="display:none">New post</button>
     </div>
 </body>
 </html>

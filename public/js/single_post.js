@@ -9,7 +9,6 @@ myAppModule.controller('SinglePostController', function($scope, $http, $location
     console.log(id)
 
     $http.get('/api/post/' + id).then(function(response){
-        console.log(response.data.postContent)
         $scope.postHtml = $sce.trustAsHtml(response.data.postContent)
         $scope.title = response.data.title
     })

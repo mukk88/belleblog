@@ -7,12 +7,13 @@
 </head>
 <body ng-app="singlePost" ng-controller="SinglePostController">
     <div class="container">
+        <% include ./partials/layout %>
+        <div class="spacer"></div>
         <h1>{{title}}</h1>
         <div class="spacer"></div>
         <div ng-bind-html="postHtml"></div>
         <div class="spacer "></div>
-        <button class="right padding font-size-3" ng-click="home()">Home</button>
-        <button class="right space-right padding font-size-3" ng-click="edit()">Edit</button>
+        <button class="right space-right padding font-size-3" ng-click="edit()" style="display:none">Edit</button>
     </div>
 </body>
 </html>
