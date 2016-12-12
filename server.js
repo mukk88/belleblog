@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use( bodyParser.json() ); 
 app.use(bodyParser.urlencoded({extended: true}))
-var db
+var db 
 
 app.get('/', function (req, res) {
     res.render('index');
